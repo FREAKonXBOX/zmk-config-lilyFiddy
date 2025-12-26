@@ -4,7 +4,10 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: prospector
       url-base: https://github.com/t-ogura
+    - name: penguinchat
+      url-base: https://github.com/penguinchat
   projects:
+    projects:
     - name: zmk
       remote: zmkfirmware
       revision: v0.3
@@ -13,5 +16,11 @@ manifest:
       remote: prospector
       revision: v2.0.0
       path: modules/prospector-zmk-module
+    - name: zmk-dongle-screen
+      remote: penguinchat
+      revision: Penguinchat-patch-1
+    - name: zmk-for-PandaKB.com-
+      remote: penguinchat
+      revision: PandaKB_Lily58
   self:
     path: config
