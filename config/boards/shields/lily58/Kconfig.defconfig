@@ -3,15 +3,36 @@ if SHIELD_LILY58_LEFT
 config ZMK_KEYBOARD_NAME
     default "Lily58"
 
+endif
+
+if SHIELD_LILY58_DONGLE
+
+config ZMK_KEYBOARD_NAME
+    default "Lily58"
+
 config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+config BT_MAX_CONN
+    default 6
+
+config BT_MAX_PAIRED
+    default 6
+
+config ZMK_USB
     default y
 
 endif
 
-if SHIELD_LILY58_LEFT || SHIELD_LILY58_RIGHT
+if SHIELD_LILY58_LEFT || SHIELD_LILY58_RIGHT || SHIELD_LILY58_DONGLE
 
 config ZMK_SPLIT
     default y
+
+config ZMK_BLE
+    default y
+
+endif
 
 if ZMK_DISPLAY
 
